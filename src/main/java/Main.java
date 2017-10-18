@@ -2,6 +2,8 @@ package main.java;
 
 import main.java.utils.DatabaseHandle;
 import main.java.utils.CityMatrix;
+import main.java.tsp.factories.CityFactory;
+import main.java.tsp.City;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,11 +12,14 @@ import java.sql.Statement;
 
 public class Main {
   public static void main(String[] args) throws SQLException{
-    CityMatrix a = CityMatrix.getInstance();
-    CityMatrix b = CityMatrix.getInstance();
-    System.out.println(a.hashCode());
-    System.out.println(b.hashCode());
-    System.out.println(a.getMatrix()[1][7]);
+    CityFactory a = new CityFactory();
+    City b = a.createCity(1);
+    System.out.println(b.toString());
+    // CityMatrix a = CityMatrix.getInstance();
+    // CityMatrix b = CityMatrix.getInstance();
+    // System.out.println(a.hashCode());
+    // System.out.println(b.hashCode());
+    // System.out.println(a.getMatrix()[1][7]);
     // DatabaseHandle a = DatabaseHandle.getInstance();
     // ResultSet rs = a.getStatement().executeQuery("SELECT * FROM cities LIMIT 5");
     // while(rs.next()){

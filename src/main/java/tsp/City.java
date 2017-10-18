@@ -6,6 +6,7 @@ import main.java.interfaces.Point;
 public @Data class City implements Point {
   public final Integer id;
   public final String name;
+  public final String country;
   public final Double latitude, longitude;
 
   public Double distanceTo(Point p) {
