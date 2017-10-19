@@ -8,6 +8,12 @@ import java.sql.SQLException;
 
 public class CityFactory {
   private final DatabaseHandle dbHandle = DatabaseHandle.getInstance();
+  private final Double punishment;
+
+  public CityFactory(Double punishment){
+    this.punishment = punishment;
+    City.punishment = punishment;
+  }
 
   public City createCity(int id){
     try{

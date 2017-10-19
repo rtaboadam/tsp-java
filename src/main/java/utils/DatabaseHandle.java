@@ -18,8 +18,6 @@ public @Data class DatabaseHandle {
                            .toAbsolutePath()
                            .normalize()
                            .toString();
-      System.out.println(dbName);
-      System.out.println(String.format("jdbc:sqlite:%s",dbName));
       this.connection = DriverManager.getConnection(String.format("jdbc:sqlite:%s",dbName));
       this.statement = connection.createStatement();
       this.statement.setQueryTimeout(30);

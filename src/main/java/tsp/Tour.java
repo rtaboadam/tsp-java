@@ -16,6 +16,10 @@ public @Data class Tour implements PointCollection {
     return this;
   }
 
+  public Integer cost(){
+    return 1;
+  }
+
   private Tour swap() {
     return this;
   }
